@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>Login</h1>
+        <section class="login-form">
+            <form method="post" action="#" role="login">
+                <input type="text" name="username" placeholder="user" required class="form-control input-lg" />
+                <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="" />
+                <div class="pwstrength_viewport_progress"></div>
+                <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+            </form>
+        </section>
+        {{error}}
+    </div>
+    <div class="col-md-4"></div>
+</div>
+{% endblock content %}

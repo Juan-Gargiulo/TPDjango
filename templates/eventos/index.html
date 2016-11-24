@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <h2>Conferencias a dictarse próximamente:</h2>
+   <br>
+   <table class='table table-striped'>
+      <thead class="thead-inverse">
+         <tr>
+            <th>Id</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+         </tr>
+      <thead>
+      {% for e in eventos %}
+      <tr>
+         <td>{{ e.id }}</td>
+         <td>{{ e.descripcion }}</td>
+         <td>{{ e.fecha }}</td>
+      </tr>
+      {% endfor %}
+   </table>
+{% endblock content %}
